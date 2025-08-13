@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 7
+names: ['0', 'ACK', 'BCC', 'MEL', 'NEV', 'SCC', 'SEK']
+
+roboflow:
+  workspace: tcc-qe4xy
+  project: detect-and-classify-skin-cancer
+  version: 8
+  license: Public Domain
+  url: https://universe.roboflow.com/tcc-qe4xy/detect-and-classify-skin-cancer/dataset/8

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pillow
+ultralytics
+python-multipart
+sqlalchemy
+os
+databases
