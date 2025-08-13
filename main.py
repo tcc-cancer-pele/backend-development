@@ -9,6 +9,7 @@ from os import getenv as osgetenv
 from datetime import datetime
 import databases
 
+"""
 DATABASE_URL = osgetenv("DATABASE_URL",)
 database = databases.Database(DATABASE_URL)
 
@@ -18,9 +19,9 @@ database = databases.Database(DATABASE_URL)
 async def lifespan(app: FastAPI):
     await database.connect()
     yield
-    await database.disconnect()
+    await database.disconnect() """
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI
 
 #Load the ML model
 model = YOLO("best.pt")
