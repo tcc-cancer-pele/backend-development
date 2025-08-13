@@ -21,7 +21,7 @@ async def lifespan(app: FastAPI):
     yield
     await database.disconnect() """
 
-app = FastAPI
+app = FastAPI()
 
 #Load the ML model
 model = YOLO("best.pt")
@@ -33,6 +33,7 @@ with open("data.yaml", "r") as f:
 
 #Creates an endpoint
 @app.post("/reading/")
+#Creates the function to analyze the image
 async def read_image(file: UploadFile = File(...)):
 
 #Reads the image sent by the user
