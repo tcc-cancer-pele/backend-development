@@ -33,7 +33,6 @@ with open("data.yaml", "r") as f:
 
 #Creates an endpoint
 @app.post("/reading/")
-
 #Creates the function to analyze the image
 async def read_image(file: UploadFile = File(...)):
 
