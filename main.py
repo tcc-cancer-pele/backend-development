@@ -56,7 +56,7 @@ async def read_image(file: UploadFile = File(...)):
             cls_id = int(box.cls.item())
             predictions.append({
             "class": class_names[cls_id],
-            "confidence": round(box.conf.item()),
+            "confidence": (box.conf.item()),
             "bbox": box.xyxy[0].tolist()
         })
 
